@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdc5e1eccedb29e4894bbfab99032590, type: 3}
-  m_Name: TreeAndRock
+  m_Name: RockAndTree
   m_EditorClassIdentifier: 
   m_Cells:
   - m_Tile: {fileID: 0}
@@ -38,7 +38,6 @@ MonoBehaviour:
   m_FloodFillContiguousOnly: 1
   m_Anchor: {x: 0.5, y: 0.5, z: 0.5}
   m_Prefabs:
-  - {fileID: 596545329238072267, guid: e6a98676adaeb054f97c105a4d172007, type: 3}
   - {fileID: 1526595827594880213, guid: 46447a63d1657c047b2d62c853b5fce2, type: 3}
   - {fileID: 1750890978589654773, guid: 03e4d885220c79a4491ab2f595481e95, type: 3}
   - {fileID: 3640999527289740431, guid: 6c6f5bbbbfd99014bbfd691693f82203, type: 3}
@@ -49,6 +48,7 @@ MonoBehaviour:
   - {fileID: 7916925914792334315, guid: c4532178d6f298741bcce89daf639375, type: 3}
   - {fileID: 4653624254179781379, guid: 5e33d0c267e55df459561354e6718f40, type: 3}
   - {fileID: 3143643043618361318, guid: f8c377ddb45ef1b4c8f609929e6a5954, type: 3}
+  - {fileID: 6781660833813672357, guid: e6a98676adaeb054f97c105a4d172007, type: 3}
   - {fileID: 2946744989273586190, guid: 452be25bbdac7034d945df25b887a90d, type: 3}
   - {fileID: 31328656499895193, guid: 39b5be3c013ea9a4dafa8ca1a1484f2a, type: 3}
   - {fileID: 8297598489058699888, guid: 9dddeb68b8c570743bf2249e6298804d, type: 3}
