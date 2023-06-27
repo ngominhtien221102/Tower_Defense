@@ -50,3 +50,9 @@ TagManager:
   - name: Turret3
     uniqueID: 2063450969
     locked: 0
+  - name: Turret4
+    uniqueID: 4088408315
+    locked: 0
+  - name: Turrets
+    uniqueID: 673280745
+    locked: 0
