@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
     {
         GameObject newInstance = _pooler.GetInstanceFromPool();
         EnemyManager enemy = newInstance.GetComponent<EnemyManager>();
-        enemy.Waypoint = _waypoint;
+        enemy.WayPoint = _waypoint;
         enemy.ResetEnemy();
         enemy.transform.localPosition = transform.position;
         newInstance.SetActive(true);
