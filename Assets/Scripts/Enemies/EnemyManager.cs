@@ -1,23 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class EnemyManager : MonoBehaviour
 {
+    public static Action<EnemyManager> OnEndReached;
     [SerializeField] private float moveSpeed = 5f;
 
     public float MoveSpeed { get; set; }
-    public WayPoint WayPoint;
-    public Vector3 CurrentPointPosition => WayPoint.GetWaypointPosition(_currentWaypointIndex);
+    public WayPoint Waypoint { get; set; }
+    public Vector3 CurrentPointPosition => Waypoint.GetWaypointPosition(_currentWaypointIndex);
 
     private int _currentWaypointIndex;
     private Vector3 _lastPointPosition;
+    private SpriteRenderer _spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        
         _currentWaypointIndex = 0;
         MoveSpeed = moveSpeed;
         _lastPointPosition = transform.position;
@@ -27,6 +31,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         Move();
+        Rotate();
         if (CurrentPointPositionReached())
         {
             UpdateWayPointIndex();
@@ -37,6 +42,28 @@ public class EnemyManager : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position,
             CurrentPointPosition, MoveSpeed * Time.deltaTime);
+    }
+
+    public void StopMovement()
+    {
+        MoveSpeed = 0;
+    }
+
+    public void ResumeMovement()
+    {
+        MoveSpeed = moveSpeed;
+    }
+
+    private void Rotate()
+    {
+        if (CurrentPointPosition.x > _lastPointPosition.x)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else
+        {
+            _spriteRenderer.flipX = true;
+        }
     }
 
     //check xem da di den waypoint hien tai chua de di chuyen den waypoint ke tiep 
@@ -54,11 +81,22 @@ public class EnemyManager : MonoBehaviour
     //Update waypoint index 
     private void UpdateWayPointIndex()
     {
-        int lastWaypointIndex = WayPoint.Points.Length - 1;
+        int lastWaypointIndex = Waypoint.Points.Length - 1;
         if (_currentWaypointIndex < lastWaypointIndex)
         {
             _currentWaypointIndex++;
         }
+        else
+        {
+            EndPointReached();
+        }
+    }
+
+    private void EndPointReached()
+    {
+        OnEndReached?.Invoke(this);
+        //_enemyHeath.ResetHealth();
+        ObjectPooler.ReturnToPool(gameObject);
     }
 
     //reset current waypoint index ve 0 
