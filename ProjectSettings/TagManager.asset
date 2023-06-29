@@ -9,10 +9,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Stone
   - Water
   - UI
-  - 
+  - Map
   - 
   - 
   - 
@@ -44,4 +44,10 @@ TagManager:
     locked: 0
   - name: Turrets
     uniqueID: 673280745
+    locked: 0 	  
+  - name: UI
+    uniqueID: 3115613055
+    locked: 0
+  - name: Enemy
+    uniqueID: 3469840027
     locked: 0
