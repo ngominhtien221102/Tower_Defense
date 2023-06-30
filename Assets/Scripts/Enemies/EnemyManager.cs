@@ -11,11 +11,13 @@ public class EnemyManager : MonoBehaviour
 
     public float MoveSpeed { get; set; }
     public WayPoint Waypoint { get; set; }
+    public EnemyHealth EnemyHealth { get; set; }
     public Vector3 CurrentPointPosition => Waypoint.GetWaypointPosition(_currentWaypointIndex);
 
     private int _currentWaypointIndex;
     private Vector3 _lastPointPosition;
     private SpriteRenderer _spriteRenderer;
+    private EnemyHealth _enemyHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,9 @@ public class EnemyManager : MonoBehaviour
         _currentWaypointIndex = 0;
         MoveSpeed = moveSpeed;
         _lastPointPosition = transform.position;
+
+        _enemyHealth = GetComponent<EnemyHealth>();
+        EnemyHealth = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -95,7 +100,7 @@ public class EnemyManager : MonoBehaviour
     private void EndPointReached()
     {
         OnEndReached?.Invoke(this);
-        //_enemyHeath.ResetHealth();
+        _enemyHealth.ResetHealth();
         ObjectPooler.ReturnToPool(gameObject);
     }
 
