@@ -82,8 +82,33 @@ public class Spawner : MonoBehaviour
         return randomTimer;
     }
 
+    private IEnumerator NextWave()
+    {
+        yield return new WaitForSeconds(delayBtwWaves);
+        _enemiesRemaining = enemyCount;
+        _spawnTimer = 0f;
+        _enemiesSpawned = 0;
+    }
+    private void RecordEndmy(EnemyManager enemy)
+    {
+        _enemiesRemaining--;
+        if (_enemiesRemaining <= 0)
+        {
+            StartCoroutine(NextWave());
+        }
+    }
+    private void OnEnable()
+    {
+        EnemyManager.OnEndReached += RecordEndmy;
+        EnemyHealth.OnEnemyKilled += RecordEndmy;
+    }
+    private void OnDisable()
+    {
+        EnemyManager.OnEndReached -= RecordEndmy;
+        EnemyHealth.OnEnemyKilled -= RecordEndmy;
+    }
 
-    
-    
+
+
 }
 

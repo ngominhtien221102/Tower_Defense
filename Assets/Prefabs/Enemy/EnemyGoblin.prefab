@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 410559180852059196}
   - component: {fileID: 6402611727031529525}
   - component: {fileID: 2285657300097086081}
+  - component: {fileID: 1392050846}
   m_Layer: 0
   m_Name: EnemyGoblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -825127269
-  m_SortingLayer: 5
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec02fd58db8ccbb488333b3b1ab34186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -187,6 +188,18 @@ MonoBehaviour:
   barPosition: {fileID: 5892774147041844409}
   initialHealth: 10
   maxHealth: 10
+--- !u!114 &1392050846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684521700836561690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de30e12b5ecfff41aa67cc63eb9addf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5092040136074469070
 GameObject:
   m_ObjectHideFlags: 0

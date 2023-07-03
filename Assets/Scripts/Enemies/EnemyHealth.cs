@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public static Action<EnemyManager> OnEnemyKilled;
+    public static Action<EnemyManager> OnEnemyHit;
 
     [SerializeField] private GameObject healthBarPrefab;
     [SerializeField] private Transform barPosition;
@@ -15,10 +19,13 @@ public class EnemyHealth : MonoBehaviour
     public float CurrentHealth { get; set; }
 
     private Image _healthBar;
+    private EnemyManager _enemy;
+
     void Start()
     {
         CreateHealthBar();
         CurrentHealth = initialHealth;
+        _enemy = GetComponent<EnemyManager>();
     }
 
     private void Update()
@@ -50,13 +57,15 @@ public class EnemyHealth : MonoBehaviour
             CurrentHealth = 0;
             Die();
         }
+        else
+        {
+            OnEnemyHit?.Invoke(_enemy);
+        }
     }
 
     private void Die()
     {
-        CurrentHealth = initialHealth;
-        _healthBar.fillAmount = 1f;
-        ObjectPooler.ReturnToPool(gameObject);
+        OnEnemyKilled?.Invoke(_enemy);
     }
 
     public void ResetHealth()
