@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 549948965591799969}
   - component: {fileID: 8796654375693402315}
   m_Layer: 0
-  m_Name: MachineProjectile2
+  m_Name: Machine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
