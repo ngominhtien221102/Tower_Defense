@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret1
       objectReference: {fileID: 0}
+    - target: {fileID: 5088505606869788938, guid: db86662ca62082d4799de3d1ca73ac6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8342109834343711033, guid: db86662ca62082d4799de3d1ca73ac6f, type: 3}
       propertyPath: attackRange
       value: 3.74
