@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private int lives = 10;
+    [SerializeField] public Canvas gameOverPanel;
 
     public int TotalLives { get; set; }
 
@@ -16,10 +18,10 @@ public class LevelManager : MonoBehaviour
     private void ReduceLives(EnemyManager enemy)
     {
         TotalLives--;
-        if (TotalLives < 0)
+        if (TotalLives <= 0)
         {
-            TotalLives = 0;
-            //Game Over
+            gameOverPanel.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
     private void OnEnable()

@@ -218,8 +218,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 673280745
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6011e33427bdb874582f2138c91f4c3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606eecc0e954c7442b6b5d9afac64d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpawnPosition: {fileID: 0}
+  projectileSpawnPosition: {fileID: 5035476731579167053}
   delayBtwAttacks: 0.2
   isDualMachine: 1
   spreadRange: 10
@@ -326,5 +326,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4002668017920570612, guid: 8fe65f427261bbf4ba1512ff04cede75, type: 3}
+  prefab: {fileID: 864234420481656881, guid: 8ec62b366cca5a14e98a5446f4638507, type: 3}
   poolSize: 10
