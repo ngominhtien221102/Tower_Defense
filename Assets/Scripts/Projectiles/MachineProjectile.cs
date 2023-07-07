@@ -19,7 +19,7 @@ public class MachineProjectile : Projectile
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("EnemyManager"))
+        if(other.CompareTag("Enemy"))
         {
             EnemyManager enemy = other.GetComponent<EnemyManager>();
             if(enemy.EnemyHealth.CurrentHealth > 0f)
