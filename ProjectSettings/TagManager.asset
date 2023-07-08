@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tower
+    uniqueID: 1698719269
+    locked: 0
   - name: Turrets
     uniqueID: 673280745
     locked: 0
