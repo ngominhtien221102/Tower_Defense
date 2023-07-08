@@ -16,17 +16,17 @@ public class TurretProjectile : MonoBehaviour
     {   
         _turret = GetComponent<Turret>();
         _pooler = GetComponent<ObjectPooler>();
-        LoadProjectile();
+        //LoadProjectile();
     }
 
     protected virtual void Update()
     {
-        if(IsTurretEmpty())
-        {
-            LoadProjectile();
-        }
+        //if (IsTurretEmpty())
+        //{
+        //    LoadProjectile();
+        //}
 
-        if(Time.time > _nextAttackTime)
+        if (Time.time > _nextAttackTime)
         {
             if (_turret.CurrentEnemyTarget != null && _currentProjecttileLoaded != null
             && _turret.CurrentEnemyTarget.EnemyHealth.CurrentHealth > 0f)
@@ -44,8 +44,10 @@ public class TurretProjectile : MonoBehaviour
         GameObject newInstance = _pooler.GetInstanceFromPool();
         newInstance.transform.localPosition = projectileSpawnPosition.position;
         newInstance.transform.SetParent(projectileSpawnPosition);
-        
-        _currentProjecttileLoaded = newInstance.GetComponent<Projectile>();
+
+        Projectile projectile = newInstance.GetComponent<Projectile>();
+
+        _currentProjecttileLoaded = projectile;
         _currentProjecttileLoaded.TurretOwner = this;
         _currentProjecttileLoaded.ResetProjectile();
         newInstance.SetActive(true);

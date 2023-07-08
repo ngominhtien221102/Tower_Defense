@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7430248400552775627}
   - component: {fileID: 7589352743807345361}
+  - component: {fileID: 8442653887892169036}
   - component: {fileID: 494585182764147421}
   - component: {fileID: 7366857703639631356}
   - component: {fileID: 1985637920935796118}
   m_Layer: 0
-  m_Name: Machine2
+  m_Name: Machine LV2 Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6201963551196965289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.69, y: -3.85, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7430248401286000445}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 442183093
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d30c4375bb4402842a34b801fdd44f0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -88,6 +89,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8442653887892169036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201963551196965289}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e024dc3780e79744b59cf64952899fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  damage: 2.5
+  minDistanceToDame: 0.1
 --- !u!114 &494585182764147421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +163,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7430248400552775627}
     m_Modifications:
+    - target: {fileID: -611303657733962027, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -611303657733962027, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 221935322444799860, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -202,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 3609704988670966038, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
       propertyPath: m_Name
       value: Machine2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121578491793371746, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}

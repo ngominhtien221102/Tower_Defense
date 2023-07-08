@@ -37,7 +37,7 @@ public class ObjectPooler : MonoBehaviour
     {
         for(int i =0; i < poolSize; i++)
         {
-            if (_pool[i].activeInHierarchy)
+            if (!_pool[i].activeInHierarchy)
             {
                 return _pool[i];
             }
