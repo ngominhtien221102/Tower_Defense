@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd464ddaec0aba4f8f1ef538889ab64, type: 3}
   m_Name: Rocket LV2
   m_EditorClassIdentifier: 
-  TurretPrefab: {fileID: 915361448500634497, guid: 4f282a5d8fd60594983f5379f4444b0b, type: 3}
-  TurretShopCost: 20
-  TurretShopSprite: {fileID: 1373048623, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}
+  TurretPrefab: {fileID: 3359923995332201933, guid: 128add4b81058524db19672e42b6c139, type: 3}
+  TurretShopCost: 30
+  TurretShopSprite: {fileID: 1870467858, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}
