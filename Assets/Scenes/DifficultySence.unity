@@ -1933,7 +1933,6 @@ MonoBehaviour:
   mediumButton: {fileID: 1917981700}
   hardButton: {fileID: 1038464689}
   homeButton: {fileID: 356396219}
-  exitButton: {fileID: 730107918}
 --- !u!4 &1310209405
 Transform:
   m_ObjectHideFlags: 0
