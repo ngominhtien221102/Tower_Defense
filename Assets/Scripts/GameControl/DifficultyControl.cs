@@ -20,7 +20,7 @@ public class DifficultyControl : MonoBehaviour
         // Sử dụng hàm onClick.AddListener để gán hàm xử lý sự kiện click cho các button
         easyButton.onClick.AddListener(SetEasyDifficulty);
         mediumButton.onClick.AddListener(SetMediumDifficulty);
-        hardButton.onClick.AddListener(SetHardDifficulty)
+        hardButton.onClick.AddListener(SetHardDifficulty);
         homeButton.onClick.AddListener(BackToHomeSence);
     }
 

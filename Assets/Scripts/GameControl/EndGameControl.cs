@@ -23,6 +23,10 @@ public class EndGameControl : MonoBehaviour
 
     public void rePlay()
     {
-        SceneManager.LoadScene("Map1");
+        //SceneManager.LoadScene("Map1");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+
     }
 }

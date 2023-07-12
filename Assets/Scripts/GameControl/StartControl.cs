@@ -16,6 +16,6 @@ public class StartControl : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("DifficultySence");
     }
 }
