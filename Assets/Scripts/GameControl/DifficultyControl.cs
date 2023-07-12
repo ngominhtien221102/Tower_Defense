@@ -14,6 +14,8 @@ public class DifficultyControl : MonoBehaviour
     private Button hardButton;
     [SerializeField]
     private Button homeButton;
+    [SerializeField]
+    private Button exitButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class DifficultyControl : MonoBehaviour
         mediumButton.onClick.AddListener(SetMediumDifficulty);
         hardButton.onClick.AddListener(SetHardDifficulty);
         homeButton.onClick.AddListener(BackToHomeSence);
+        exitButton.onClick.AddListener(SetEasyDifficulty);
     }
 
     void SetEasyDifficulty()
@@ -44,6 +47,6 @@ public class DifficultyControl : MonoBehaviour
 
     void BackToHomeSence()
     {
-        SceneManager.LoadScene("StartSence");
+        SceneManager.LoadScene("StartScene");
     }
 }
