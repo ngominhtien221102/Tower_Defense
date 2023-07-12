@@ -29,4 +29,5 @@ public class EndGameControl : MonoBehaviour
         Time.timeScale = 1f;
 
     }
+
 }
