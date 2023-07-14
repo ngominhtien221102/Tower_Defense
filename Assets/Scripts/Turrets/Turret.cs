@@ -5,7 +5,9 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [SerializeField] private float attackRange = 3f;
+    [SerializeField] public int SellValue;
     public EnemyManager CurrentEnemyTarget { get; set; }
+
     private List<EnemyManager> _enemies;
 
     private bool _gameStarted;
