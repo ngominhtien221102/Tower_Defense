@@ -98,18 +98,17 @@ public class Spawner : MonoBehaviour
         if (_enemiesRemaining == 0)
         {
             _wavesRemainning--;
-            if(_wavesRemainning == 0)
-            {
-                winPanel.gameObject.SetActive(true);
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                StartCoroutine(NextWave());
 
-            }
+            StartCoroutine(NextWave());
+
+        }
+        if (_wavesRemainning == 0 && _enemiesRemaining == 0)
+        {
+            winPanel.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
+
     private void OnEnable()
     {
         EnemyManager.OnEndReached += RecordEndmy;
