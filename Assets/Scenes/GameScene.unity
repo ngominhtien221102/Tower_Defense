@@ -390,8 +390,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b427945ce7070ca48b11c2a88e36969c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winPanel: {fileID: 0}
   spawnMode: 0
   enemyCount: 10
+  waveCount: 3
   delayBtwWaves: 1
   delayBtwSpawns: 0.5
   minRandomDelay: 1
