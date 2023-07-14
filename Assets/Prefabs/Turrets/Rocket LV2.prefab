@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 6
+  SellValue: 21
 --- !u!114 &1408171218368320936
 MonoBehaviour:
   m_ObjectHideFlags: 0

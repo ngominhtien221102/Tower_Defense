@@ -6,6 +6,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public static Action<Node> OnNodeSelected;
+    public static Action OnTurretSold;
 
     public Turret Turret { get; set; }
 
@@ -22,5 +23,16 @@ public class Node : MonoBehaviour
     public void SelectTurret()
     {
         OnNodeSelected?.Invoke(this);
+    }
+
+    public void SellTurret()
+    {
+        if (!IsEmpty())
+        {
+            CurrencySystem.Instance.AddCoins(Turret.SellValue);
+            Destroy(Turret.gameObject);
+            Turret = null;
+            OnTurretSold?.Invoke();
+        }
     }
 }
