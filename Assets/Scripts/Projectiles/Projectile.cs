@@ -7,7 +7,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public static Action<EnemyManager, float> OnEnemyHit;
-    [SerializeField] protected float moveSpeed = 10f;
+    [SerializeField] protected float moveSpeed = 40f;
     [SerializeField] protected float damage = 2f;
     [SerializeField] private float minDistanceToDame = 0.1f;
 

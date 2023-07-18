@@ -20,7 +20,8 @@ public class EnemyHealth : MonoBehaviour
 
     private Image _healthBar;
     private EnemyManager _enemy;
-
+    private bool _isDead;
+    
     void Start()
     {
         CreateHealthBar();
@@ -51,11 +52,17 @@ public class EnemyHealth : MonoBehaviour
 
     public void DealDamage(float damageReceived)
     {
+        if (this._isDead)
+        {
+            return;
+        }
         CurrentHealth -= damageReceived;
         if (CurrentHealth <= 0)
         {
+            this._isDead = true;
             CurrentHealth = 0;
             Die();
+            
         }
         else
         {
@@ -72,5 +79,7 @@ public class EnemyHealth : MonoBehaviour
     {
         CurrentHealth = initialHealth;
         _healthBar.fillAmount = 1f;
+        this._isDead = false;
     }
+
 }

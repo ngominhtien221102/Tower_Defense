@@ -42,7 +42,7 @@ public class EnemyAnimations : MonoBehaviour
     {
         _enemy.StopMovement();
         PlayDieAnimation();
-        yield return new WaitForSeconds(GetCurrentAnimationLength() + 0.3f);
+        yield return new WaitForSeconds(GetCurrentAnimationLength());
         _enemy.ResumeMovement();
         _enemyHealth.ResetHealth();
         ObjectPooler.ReturnToPool(_enemy.gameObject);
