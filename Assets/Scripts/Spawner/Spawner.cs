@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 public enum SpawndModes
 {
@@ -137,10 +138,10 @@ public class Spawner : MonoBehaviour
         _spawnTimer = 0f;
         _enemiesSpawned = 0;
     }
-    private void RecordEndmy(EnemyManager enemy)
+    private async void RecordEndmy(EnemyManager enemy)
     {
         _enemiesRemaining--;
-        if (_enemiesRemaining == 0)
+        if (_enemiesRemaining == 0 && _wavesRemainning > 0)
         {
             _wavesRemainning--;
             CurrentWave++;
@@ -150,6 +151,7 @@ public class Spawner : MonoBehaviour
         }
         if (_wavesRemainning == 0 && _enemiesRemaining == 0)
         {
+            await Task.Delay((int)delayBtwWaves*1000); 
             winPanel.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }

@@ -177,7 +177,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.43335748, y: -0.21667886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -188,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.8, y: 3.32}
+  m_Size: {x: 1.9427543, y: 2.639009}
   m_EdgeRadius: 0
 --- !u!114 &2467655795041193905
 MonoBehaviour:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d3231fc6830344889b0477c8dfe24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2.5
 --- !u!114 &3173728801113834280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,8 +217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarPrefab: {fileID: 2925861457278767888, guid: 2e491c7640874dd4eade02b0fd50215a, type: 3}
   barPosition: {fileID: 5327060882394421408}
-  initialHealth: 10
-  maxHealth: 10
+  initialHealth: 15
+  maxHealth: 15
 --- !u!114 &437048786
 MonoBehaviour:
   m_ObjectHideFlags: 0
