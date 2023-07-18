@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e024dc3780e79744b59cf64952899fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 15
   damage: 2.5
   minDistanceToDame: 0.1
 --- !u!114 &494585182764147421
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  damage: 2.5
+  damage: 4
   minDistanceToDame: 0.1
 --- !u!50 &7366857703639631356
 Rigidbody2D:
@@ -170,6 +170,10 @@ PrefabInstance:
     - target: {fileID: -611303657733962027, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -611303657733962027, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
+      propertyPath: moveSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 221935322444799860, guid: 8878ff2c352721441b67b9b0eb491c0d, type: 3}
       propertyPath: m_RootOrder

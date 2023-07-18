@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5559731204dc52468c2e8c351399eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 7
+  attackRange: 6
   SellValue: 28
 --- !u!114 &5237453298101743745
 MonoBehaviour:
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 8505082468270946729}
-  delayBtwAttacks: 0.3
+  delayBtwAttacks: 0.5
 --- !u!1 &8514561602697693917
 GameObject:
   m_ObjectHideFlags: 0
