@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rocket LV3
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 8468211335423781092, guid: ca896f497cf4f6445b75fa80469ae81a, type: 3}
-  TurretShopCost: 40
+  TurretShopCost: 75
   TurretShopSprite: {fileID: 1382645447, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}

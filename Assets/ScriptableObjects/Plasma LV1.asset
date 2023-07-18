@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Plasma LV1
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 6513823212257698257, guid: 2d66c686691a0794e90b5e772a9d5e66, type: 3}
-  TurretShopCost: 20
+  TurretShopCost: 25
   TurretShopSprite: {fileID: 657360732, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}
