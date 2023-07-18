@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Laser LV2
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 770793375945443755, guid: 5da7cf93b375ad14daa71995c414c474, type: 3}
-  TurretShopCost: 20
+  TurretShopCost: 50
   TurretShopSprite: {fileID: -441208249, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}

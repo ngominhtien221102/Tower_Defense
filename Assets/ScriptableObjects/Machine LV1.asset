@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Machine LV1
   m_EditorClassIdentifier: 
   TurretPrefab: {fileID: 4129807867685970434, guid: a079b9215beaa214199c3588a815bc6b, type: 3}
-  TurretShopCost: 15
+  TurretShopCost: 25
   TurretShopSprite: {fileID: 529113656, guid: 42aed89f035c41c48a2fa073c1bb3aad, type: 3}
