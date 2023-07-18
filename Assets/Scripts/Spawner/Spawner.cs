@@ -23,21 +23,30 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float minRandomDelay;
     [SerializeField] private float maxRandomDelay;
 
+    [Header("Poolers")]
+    [SerializeField] private ObjectPooler enemyWave5Pooler;
+    [SerializeField] private ObjectPooler enemyWave6To10Pooler;
+    [SerializeField] private ObjectPooler enemyWave11To15Pooler;
+    [SerializeField] private ObjectPooler enemyWave16To20Pooler;
+    [SerializeField] private ObjectPooler enemyWave21To25Pooler;
+    [SerializeField] private ObjectPooler enemyWave26To30Pooler;
+
+
     private float _spawnTimer;
     private int _enemiesSpawned;
     private int _enemiesRemaining;
     private int _wavesRemainning;
 
-    private ObjectPooler _pooler;
+    public int CurrentWave { get; set; }
 
     private WayPoint _waypoint;
     // Start is called before the first frame update
     void Start()
     {
-        _pooler = GetComponent<ObjectPooler>();
         _waypoint = GetComponent<WayPoint>();
         _wavesRemainning = waveCount;
         _enemiesRemaining = enemyCount;
+        CurrentWave = 1;
     }
 
     // Update is called once per frame
@@ -57,7 +66,7 @@ public class Spawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject newInstance = _pooler.GetInstanceFromPool();
+        GameObject newInstance = GetPooler().GetInstanceFromPool();
         EnemyManager enemy = newInstance.GetComponent<EnemyManager>();
         enemy.Waypoint = _waypoint;
         enemy.ResetEnemy();
@@ -79,6 +88,42 @@ public class Spawner : MonoBehaviour
         return delay;
     }
 
+    private ObjectPooler GetPooler()
+    {
+        int currentWave = CurrentWave;
+        if (currentWave <= 5) 
+        {
+            return enemyWave5Pooler;
+        }
+
+        if (currentWave > 5 && currentWave <= 10) 
+        {
+            return enemyWave6To10Pooler;
+        }
+        
+        if (currentWave > 10 && currentWave <= 15) 
+        {
+            return enemyWave11To15Pooler;
+        }
+        
+        if (currentWave > 15 && currentWave <= 20) 
+        {
+            return enemyWave16To20Pooler;
+        }
+        
+        if (currentWave > 20 && currentWave <= 25) 
+        {
+            return enemyWave21To25Pooler;
+        }
+
+        if (currentWave > 25 && currentWave <= 30)
+        {
+            return enemyWave26To30Pooler;
+        }
+
+        return null;
+    }
+
     private float getRandomDelay()
     {
         float randomTimer = Random.Range(minRandomDelay, maxRandomDelay);
@@ -98,6 +143,7 @@ public class Spawner : MonoBehaviour
         if (_enemiesRemaining == 0)
         {
             _wavesRemainning--;
+            CurrentWave++;
 
             StartCoroutine(NextWave());
 

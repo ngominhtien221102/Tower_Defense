@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
     [SerializeField] private int lives = 10;
     [SerializeField] public Canvas gameOverPanel;
 
     public int TotalLives { get; set; }
+    
 
     private void Start()
     {
-        TotalLives = lives;
+        TotalLives = lives;      
     }
 
     private void ReduceLives(EnemyManager enemy)
@@ -24,6 +25,7 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+
     private void OnEnable()
     {
         EnemyManager.OnEndReached += ReduceLives;
