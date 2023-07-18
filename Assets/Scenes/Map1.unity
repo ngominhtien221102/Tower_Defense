@@ -1436,18 +1436,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winPanel: {fileID: 1989106942}
   spawnMode: 0
-  enemyCount: 1
-  waveCount: 20
+  enemyCount: 10
+  waveCount: 2
   delayBtwWaves: 1
-  delayBtwSpawns: 0.5
-  minRandomDelay: 1
-  maxRandomDelay: 3
-  enemyWave5Pooler: {fileID: 1952081074}
-  enemyWave6To10Pooler: {fileID: 700836041}
-  enemyWave11To15Pooler: {fileID: 845698750}
-  enemyWave16To20Pooler: {fileID: 322588854}
-  enemyWave21To25Pooler: {fileID: 169540374}
-  enemyWave26To30Pooler: {fileID: 21188282}
+  delayBtwSpawns: 1
+  minRandomDelay: 0.5
+  maxRandomDelay: 2
 --- !u!114 &470279899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,7 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2684521700836561690, guid: 62cb7418cd89470488dd0077c6d667f0, type: 3}
+  prefab: {fileID: 194254449498149843, guid: 8cb2dba68d270ee42afa480010202693, type: 3}
   poolSize: 1
 --- !u!114 &470279900
 MonoBehaviour:
@@ -13552,7 +13546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62bfdd6692eff04c8a72cb5ed536897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinTest: 200
+  coinTest: 50
 --- !u!4 &1586092097
 Transform:
   m_ObjectHideFlags: 0
