@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e024dc3780e79744b59cf64952899fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  damage: 8
+  moveSpeed: 15
+  damage: 6
   minDistanceToDame: 0.1
 --- !u!1 &7932951735358888772
 GameObject:
