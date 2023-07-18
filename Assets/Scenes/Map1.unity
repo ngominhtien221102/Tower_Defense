@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6282802010955782143, guid: 160fe98778219a241b3ab747f38c4263, type: 3}
+  prefab: {fileID: 2684521700836561690, guid: 62cb7418cd89470488dd0077c6d667f0, type: 3}
   poolSize: 10
 --- !u!1 &40780828
 GameObject:
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4693136050562130625, guid: a08f2da150063a8459f018e360e4a107, type: 3}
+  prefab: {fileID: 194254449498149843, guid: 8cb2dba68d270ee42afa480010202693, type: 3}
   poolSize: 10
 --- !u!1 &182467130
 GameObject:
@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4865121542877011335, guid: eaa3c9512d23add4e91ea75dc120db4f, type: 3}
+  prefab: {fileID: 4693136050562130625, guid: a08f2da150063a8459f018e360e4a107, type: 3}
   poolSize: 10
 --- !u!1 &346680881
 GameObject:
@@ -1442,6 +1442,12 @@ MonoBehaviour:
   delayBtwSpawns: 1
   minRandomDelay: 0.5
   maxRandomDelay: 2
+  enemyWave5Pooler: {fileID: 1952081074}
+  enemyWave6To10Pooler: {fileID: 700836041}
+  enemyWave11To15Pooler: {fileID: 845698750}
+  enemyWave16To20Pooler: {fileID: 322588854}
+  enemyWave21To25Pooler: {fileID: 169540374}
+  enemyWave26To30Pooler: {fileID: 21188282}
 --- !u!114 &470279899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,7 +2133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 194254449498149843, guid: 8cb2dba68d270ee42afa480010202693, type: 3}
+  prefab: {fileID: 6492281556988475390, guid: 65a124b16ae22724aa0a2f2ccfd5cec5, type: 3}
   poolSize: 10
 --- !u!1 &845698748
 GameObject:
@@ -2173,7 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6492281556988475390, guid: 65a124b16ae22724aa0a2f2ccfd5cec5, type: 3}
+  prefab: {fileID: 4865121542877011335, guid: eaa3c9512d23add4e91ea75dc120db4f, type: 3}
   poolSize: 10
 --- !u!1 &851264495
 GameObject:
@@ -14270,7 +14276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2684521700836561690, guid: 62cb7418cd89470488dd0077c6d667f0, type: 3}
+  prefab: {fileID: 6282802010955782143, guid: 160fe98778219a241b3ab747f38c4263, type: 3}
   poolSize: 10
 --- !u!1 &1965704286
 GameObject:
