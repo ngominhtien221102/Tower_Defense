@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 6
-  SellValue: 10
+  SellValue: 17
 --- !u!114 &1848680469988176354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 6683991901902951522}
-  delayBtwAttacks: 1
+  delayBtwAttacks: 0.5
   isDualMachine: 0
-  spreadRange: 5
+  spreadRange: 6
 --- !u!114 &6439731756550093217
 MonoBehaviour:
   m_ObjectHideFlags: 0

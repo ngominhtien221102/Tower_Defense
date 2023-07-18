@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 6
-  SellValue: 18
+  SellValue: 52
 --- !u!114 &8020876135990716574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,15 +307,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8286779755960266171}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 606eecc0e954c7442b6b5d9afac64d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 5035476731579167053}
-  delayBtwAttacks: 0.6
+  delayBtwAttacks: 0.5
   isDualMachine: 1
-  spreadRange: 10
+  spreadRange: 6
 --- !u!114 &7669171945018941404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8286779755960266171}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e5e2ffeb6bfafd4c8a1051ced9eb8d8, type: 3}
   m_Name: 
