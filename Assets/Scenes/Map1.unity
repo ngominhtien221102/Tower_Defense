@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winPanel: {fileID: 1989106942}
-  spawnMode: 0
+  spawnMode: 1
   enemyCount: 10
   waveCount: 2
   delayBtwWaves: 1

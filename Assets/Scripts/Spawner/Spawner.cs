@@ -47,6 +47,32 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int difficulty = PlayerPrefs.GetInt("Difficulty");
+        switch (difficulty)
+        {
+            case 0: // Easy
+                waveCount = 10;
+                delayBtwWaves = 5;
+                enemyCount = 10;
+                minRandomDelay = 0.5f;
+                maxRandomDelay = 2;
+                break;
+            case 1: // Medium
+                waveCount = 15;
+                delayBtwWaves = 4;
+                enemyCount = 15;
+                minRandomDelay = 0.5f;
+                maxRandomDelay = 2;
+                break;
+            case 2: // Hard
+                waveCount = 25;
+                delayBtwWaves = 4;
+                enemyCount = 15;
+                minRandomDelay = 0.5f;
+                maxRandomDelay = 1.5f;
+                break;
+        }
+
         _waypoint = GetComponent<WayPoint>();
         _wavesRemainning = waveCount;
         _enemiesRemaining = enemyCount;
