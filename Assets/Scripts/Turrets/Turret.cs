@@ -8,6 +8,8 @@ public class Turret : MonoBehaviour
     [SerializeField] public int SellValue;
     public EnemyManager CurrentEnemyTarget { get; set; }
 
+    public float AttackRange => attackRange;
+
     private List<EnemyManager> _enemies;
 
     private bool _gameStarted;

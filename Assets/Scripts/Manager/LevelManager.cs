@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,15 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private int lives = 10;
     [SerializeField] public Canvas gameOverPanel;
 
+    public int CurrenWave { get; set; }
+
     public int TotalLives { get; set; }
     
 
     private void Start()
     {
-        TotalLives = lives;      
+        TotalLives = lives;
+        CurrenWave = 1;
     }
 
     private void ReduceLives(EnemyManager enemy)
@@ -26,12 +30,21 @@ public class LevelManager : Singleton<LevelManager>
         }
     }
 
+    private void WaveCompleted()
+    {
+        CurrenWave++;
+    }
+
     private void OnEnable()
     {
         EnemyManager.OnEndReached += ReduceLives;
+        Spawner.OnWaveCompleted += WaveCompleted;
     }
     private void OnDisable()
     {
         EnemyManager.OnEndReached -= ReduceLives;
+        Spawner.OnWaveCompleted -= WaveCompleted;
     }
+
+    
 }

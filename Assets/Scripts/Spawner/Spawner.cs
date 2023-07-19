@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ public enum SpawndModes
 
 public class Spawner : MonoBehaviour
 {
+    public static Action OnWaveCompleted;
+
     [SerializeField] private Canvas winPanel;
     [Header("Settings")]
     [SerializeField] private SpawndModes spawnMode = SpawndModes.Fixed;
@@ -127,7 +130,7 @@ public class Spawner : MonoBehaviour
 
     private float getRandomDelay()
     {
-        float randomTimer = Random.Range(minRandomDelay, maxRandomDelay);
+        float randomTimer = UnityEngine.Random.Range(minRandomDelay, maxRandomDelay);
         return randomTimer;
     }
 
@@ -145,7 +148,7 @@ public class Spawner : MonoBehaviour
         {
             _wavesRemainning--;
             CurrentWave++;
-
+            OnWaveCompleted?.Invoke();
             StartCoroutine(NextWave());
 
         }
