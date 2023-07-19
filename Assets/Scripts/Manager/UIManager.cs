@@ -12,7 +12,17 @@ public class UIManager : Singleton<UIManager>
     [Header("Text")]
     [SerializeField] private TextMeshProUGUI sellText;
 
+    [SerializeField] private TextMeshProUGUI totalCoinsText;
+    [SerializeField] private TextMeshProUGUI lifesText;
+    [SerializeField] private TextMeshProUGUI currenWaveText;
 
+
+    private void Update()
+    {
+        totalCoinsText.text = CurrencySystem.Instance.TotalCoins.ToString();
+        lifesText.text = LevelManager.Instance.TotalLives.ToString();
+        currenWaveText.text = $"Wave {LevelManager.Instance.CurrenWave}";
+    }
 
     private Node _currentNodeSelected;
 
@@ -36,6 +46,7 @@ public class UIManager : Singleton<UIManager>
     public void CloseSellPanel()
     {
         nodeUIPanel.SetActive(false);
+        _currentNodeSelected.AttackRangeSprite.SetActive(false);
     }
 
     private void showNodeUI()
