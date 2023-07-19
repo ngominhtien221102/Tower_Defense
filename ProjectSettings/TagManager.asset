@@ -60,6 +60,9 @@ TagManager:
   - name: Projectile
     uniqueID: 442183093
     locked: 0
+  - name: UI2
+    uniqueID: 3645727379
+    locked: 0
   - name: Panel
     uniqueID: 3565452549
     locked: 0
