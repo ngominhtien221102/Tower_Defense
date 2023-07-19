@@ -258,52 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16491940}
   m_CullTransparentMesh: 1
---- !u!1 &21188280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 21188281}
-  - component: {fileID: 21188282}
-  m_Layer: 0
-  m_Name: Wave 26 - 30
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &21188281
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21188280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1557112713}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &21188282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21188280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a2ec32dc308ae46b5c58f17298f92a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 2684521700836561690, guid: 62cb7418cd89470488dd0077c6d667f0, type: 3}
-  poolSize: 10
 --- !u!1 &40780828
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +764,7 @@ GameObject:
   - component: {fileID: 169540373}
   - component: {fileID: 169540374}
   m_Layer: 0
-  m_Name: Wave 21-25
+  m_Name: Wave 13 - 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1180,7 +1134,7 @@ GameObject:
   - component: {fileID: 322588853}
   - component: {fileID: 322588854}
   m_Layer: 0
-  m_Name: Wave 16 - 20
+  m_Name: Wave 10 - 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,12 +1476,11 @@ MonoBehaviour:
   delayBtwSpawns: 1
   minRandomDelay: 0.5
   maxRandomDelay: 2
-  enemyWave5Pooler: {fileID: 1952081074}
-  enemyWave6To10Pooler: {fileID: 700836041}
-  enemyWave11To15Pooler: {fileID: 845698750}
-  enemyWave16To20Pooler: {fileID: 322588854}
-  enemyWave21To25Pooler: {fileID: 169540374}
-  enemyWave26To30Pooler: {fileID: 21188282}
+  enemyWave3Pooler: {fileID: 1952081074}
+  enemyWave4To6Pooler: {fileID: 700836041}
+  enemyWave7To9Pooler: {fileID: 845698750}
+  enemyWave10To12Pooler: {fileID: 322588854}
+  enemyWave13To15Pooler: {fileID: 169540374}
 --- !u!114 &470279899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,7 +2133,7 @@ GameObject:
   - component: {fileID: 700836040}
   - component: {fileID: 700836041}
   m_Layer: 0
-  m_Name: Wave 5 - 10
+  m_Name: Wave 4 - 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2496,7 +2449,7 @@ GameObject:
   - component: {fileID: 845698749}
   - component: {fileID: 845698750}
   m_Layer: 0
-  m_Name: Wave 11-15
+  m_Name: Wave 7 - 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13715,7 +13668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55.8, y: -25}
+  m_AnchoredPosition: {x: 55.80005, y: -25}
   m_SizeDelta: {x: 200, y: 120}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1446380734
@@ -14122,7 +14075,6 @@ Transform:
   - {fileID: 845698749}
   - {fileID: 322588853}
   - {fileID: 169540373}
-  - {fileID: 21188281}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14846,7 +14798,7 @@ GameObject:
   - component: {fileID: 1952081073}
   - component: {fileID: 1952081074}
   m_Layer: 0
-  m_Name: Wave 1-5
+  m_Name: Wave 1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

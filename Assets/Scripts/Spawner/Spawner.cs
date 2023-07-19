@@ -28,12 +28,12 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float maxRandomDelay;
 
     [Header("Poolers")]
-    [SerializeField] private ObjectPooler enemyWave5Pooler;
-    [SerializeField] private ObjectPooler enemyWave6To10Pooler;
-    [SerializeField] private ObjectPooler enemyWave11To15Pooler;
-    [SerializeField] private ObjectPooler enemyWave16To20Pooler;
-    [SerializeField] private ObjectPooler enemyWave21To25Pooler;
-    [SerializeField] private ObjectPooler enemyWave26To30Pooler;
+    [SerializeField] private ObjectPooler enemyWave3Pooler;
+    [SerializeField] private ObjectPooler enemyWave4To6Pooler;
+    [SerializeField] private ObjectPooler enemyWave7To9Pooler;
+    [SerializeField] private ObjectPooler enemyWave10To12Pooler;
+    [SerializeField] private ObjectPooler enemyWave13To15Pooler;
+
 
 
     private float _spawnTimer;
@@ -51,22 +51,22 @@ public class Spawner : MonoBehaviour
         switch (difficulty)
         {
             case 0: // Easy
-                waveCount = 10;
-                delayBtwWaves = 5;
+                waveCount = 9;
+                delayBtwWaves = 4;
                 enemyCount = 10;
                 minRandomDelay = 0.5f;
                 maxRandomDelay = 2;
                 break;
             case 1: // Medium
-                waveCount = 15;
-                delayBtwWaves = 4;
+                waveCount = 9;
+                delayBtwWaves = 3;
                 enemyCount = 15;
                 minRandomDelay = 0.5f;
                 maxRandomDelay = 2;
                 break;
             case 2: // Hard
-                waveCount = 25;
-                delayBtwWaves = 4;
+                waveCount = 15;
+                delayBtwWaves = 3;
                 enemyCount = 15;
                 minRandomDelay = 0.5f;
                 maxRandomDelay = 1.5f;
@@ -121,34 +121,29 @@ public class Spawner : MonoBehaviour
     private ObjectPooler GetPooler()
     {
         int currentWave = CurrentWave;
-        if (currentWave <= 5) 
+        if (currentWave <= 3) 
         {
-            return enemyWave5Pooler;
+            return enemyWave3Pooler;
         }
 
-        if (currentWave > 5 && currentWave <= 10) 
+        if (currentWave > 3 && currentWave <= 6) 
         {
-            return enemyWave6To10Pooler;
+            return enemyWave4To6Pooler;
         }
         
-        if (currentWave > 10 && currentWave <= 15) 
+        if (currentWave > 6 && currentWave <= 9) 
         {
-            return enemyWave11To15Pooler;
+            return enemyWave7To9Pooler;
         }
         
-        if (currentWave > 15 && currentWave <= 20) 
+        if (currentWave > 9 && currentWave <= 12) 
         {
-            return enemyWave16To20Pooler;
+            return enemyWave10To12Pooler;
         }
         
-        if (currentWave > 20 && currentWave <= 25) 
+        if (currentWave > 12 && currentWave <= 15) 
         {
-            return enemyWave21To25Pooler;
-        }
-
-        if (currentWave > 25 && currentWave <= 30)
-        {
-            return enemyWave26To30Pooler;
+            return enemyWave13To15Pooler;
         }
 
         return null;
