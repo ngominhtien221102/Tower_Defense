@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8782257091745027522}
   - component: {fileID: -8820502015966585128}
   - component: {fileID: -4369370949093808191}
+  - component: {fileID: -4487971080013801069}
   m_Layer: 0
   m_Name: EnemyMinotaur
   m_TagString: Enemy
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12381649, y: 0}
+  m_Offset: {x: 0.02383101, y: -0.000000059604645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -187,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7713046, y: 2.7222223}
+  m_Size: {x: 1.0714061, y: 1.9723312}
   m_EdgeRadius: 0
 --- !u!114 &-8820502015966585128
 MonoBehaviour:
@@ -218,3 +219,15 @@ MonoBehaviour:
   barPosition: {fileID: 7311497946403731771}
   initialHealth: 10
   maxHealth: 10
+--- !u!114 &-4487971080013801069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492281556988475390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de30e12b5ecfff41aa67cc63eb9addf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
